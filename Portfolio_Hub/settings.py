@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-genfzn5me-l_m=65=hf_@ipv9vsdbz-g)xrj-@6v_+yd@^t@7e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.96', '0.0.0.0', '127.0.0.1']
 
 
 # Application definition
@@ -29,6 +29,10 @@ INSTALLED_APPS = [
     'myinfo.apps.MyinfoConfig',
     'projects.apps.ProjectsConfig',
     'blogs.apps.BlogsConfig',
+    "accounts.apps.AccountsConfig",
+    "pages.apps.PagesConfig",
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -46,7 +50,7 @@ ROOT_URLCONF = 'Portfolio_Hub.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -113,3 +117,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTH_USER_MODEL = "accounts.CustomUser"
+
+
+LOGIN_REDIRECT_URL = "home" 
+LOGOUT_REDIRECT_URL = "home"  
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
