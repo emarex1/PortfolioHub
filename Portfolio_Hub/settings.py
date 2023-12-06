@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "pages.apps.PagesConfig",
     "crispy_forms",
     "crispy_bootstrap5",
+    "articles.apps.ArticlesConfig",
 ]
 
 MIDDLEWARE = [
