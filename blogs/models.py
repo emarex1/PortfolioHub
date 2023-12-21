@@ -43,3 +43,16 @@ class RecentPosts(models.Model):
     
     def get_absolute_url(self):
         return reverse("recent_post_detail", kwargs={"pk": self.pk})
+
+class FeaturedPosts(models.Model):
+    title = models.CharField(max_length=50)
+    title_type = models.CharField(max_length=20)
+    body = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+    img = models.ImageField(upload_to='featured_imgs', blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+    
+    def get_absolute_url(self):
+        return reverse("featured_post_detail", kwargs={"pk": self.pk})

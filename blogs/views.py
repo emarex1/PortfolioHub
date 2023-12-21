@@ -1,5 +1,5 @@
 from django.views.generic import ListView, DetailView, View
-from .models import UserProfile, RecentPosts
+from .models import UserProfile, RecentPosts, FeaturedPosts
 from django.shortcuts import render
 
 
@@ -20,6 +20,7 @@ class HomeView(View):
         context = {
             'profile': UserProfile.objects.all(),
             'posts': RecentPosts.objects.all()[:2],
+            'featured': FeaturedPosts.objects.all(),
         }
         return context
 
