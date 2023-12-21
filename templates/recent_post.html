@@ -1,0 +1,13 @@
+
+<div class="rectangle-div"></div>
+<div class="home-child1"></div>
+<div class="home-child2"></div>
+
+<div class="recent-posts">Recent posts</div>
+<div class="view-all">View all</div>
+{% for item in posts %}
+<b class="making-a-design">{{ item.title }}</b>
+<div class="feb-2020">{{ item.date|date:"M" }} {{ item.date|date:"d" }}, {{ item.date|date:"Y" }}</div>
+<div class="design-pattern">Design, Pattern</div>
+<div class="amet-minim-mollit1">{{ item.body|truncatechars:200 }}</div>
+{% endfor %}
