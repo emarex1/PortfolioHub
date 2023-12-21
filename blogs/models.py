@@ -54,5 +54,10 @@ class FeaturedPosts(models.Model):
     def __str__(self):
         return self.title
     
+    def get_featured_imgs_url(self):
+        if self.img:
+            return self.img.url
+        return None
+    
     def get_absolute_url(self):
         return reverse("featured_post_detail", kwargs={"pk": self.pk})

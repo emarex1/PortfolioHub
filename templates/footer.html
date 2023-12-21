@@ -1,12 +1,17 @@
+<!--the link to the svg file is static/images/fb.svg-->
+
+{% load static %}
 <div class="footer">
     <div class="footer-child"></div>
-    <img class="fb-icon" alt="" src="./public/fb.svg" />
+    <img class="fb-icon" alt="" src="{% static 'images/fb.svg' %}" />
 
-    <img class="linkedin-icon" alt="" src="./public/linkedin.svg" />
-
-    <img class="group-icon" alt="" src="./public/group.svg" />
-
-    <img class="insta-icon" alt="" src="./public/insta.svg" />
+    <a href="" target="_blank">
+      <img class="linkedin-icon" alt="" src="{% static 'images/linkedin.svg' %}"/>
+    </a>
+    <a href="https://twitter.com/_Emarex" target="_blank">
+    <img class="group-icon" alt="" src="{% static 'images/group.svg' %}" />
+    </a>
+    <img class="insta-icon" alt="" src="{% static 'images/insta.svg' %}" />
 
     <div class="copyright-2020-all">
       Copyright ©2020 All rights reserved
