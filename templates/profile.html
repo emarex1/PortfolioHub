@@ -1,0 +1,11 @@
+{% for profile in profile %}
+      <div class="container">
+      <b class="hi-i-am-container">
+        <p class="hi-i-am">{{ profile.my_title }}</p>
+      </b>
+      <div class="amet-minim-mollit">{{ profile.bio }}</div>
+      <div class="download-resume"><a href="{{ profile.get_resume_url }}">Download Resume</a></div>
+      {% if profile.pics %}
+      <img class="home-inner" src="{{ profile.get_profile_pic_url }}" alt="{{ profile.title }}'s Profile Picture">
+        {% endif %}
+        {% endfor %}
