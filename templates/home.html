@@ -3,51 +3,43 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for userprofile in userprofile_list %}
+<div class="home">
+  {% include 'navigation.html' %}
+    
    
-    <div class="home">
-      <div class="home-child"></div>
-      <div class="home-item"></div>
-      <div class="works">Works</div>
-      <div class="blog">Blog</div>
-      <div class="contact">Contact</div>
-      <div class="container">
-      <b class="hi-i-am-container">
-        <p class="hi-i-am">{{ userprofile.title }}</p>
-      </b>
-      <div class="amet-minim-mollit">{{ userprofile.bio }}</div>
-      <div class="download-resume"><a href="{{ userprofile.get_resume_url }}">Download Resume</a></div>
-      {% if userprofile.pics %}
-      <img class="home-inner" src="{{ userprofile.get_profile_pic_url }}" alt="{{ userprofile.title }}'s Profile Picture">
-        {% endif %}
-        {% endfor %}
+  {% include 'profile.html' with profile=profile %}
+      
       </div>
       <div class="rectangle-div"></div>
       <div class="home-child1"></div>
       <div class="home-child2"></div>
-      <b class="making-a-design">Making a design system from scratch</b>
-      <b class="creating-pixel-perfect"
-        >Creating pixel perfect icons in Figma</b>
+      
+      <div class="recent-posts">Recent posts</div>
+      <div class="view-all">View all</div>
+      {% for item in posts %}
+      <b class="making-a-design">{{ item.title }}</b>
+      <div class="feb-2020">{{ item.date|date:"M" }} {{ item.date|date:"d" }}, {{ item.date|date:"Y" }}</div>
       <div class="design-pattern">Design, Pattern</div>
+      <div class="amet-minim-mollit1">{{ item.body|truncatechars:200 }}</div>
+      {% endfor %}
+
+      <!--<b class="creating-pixel-perfect"
+        >Creating pixel perfect icons in Figma</b>
+      
       <div class="figma-icon-design">Figma, Icon Design</div>
       <img class="vector-icon" alt="" src="./public/vector-1.svg" />
 
       <img class="home-child3" alt="" src="./public/vector-1.svg" />
 
-      <div class="feb-2020">12 Feb 2020</div>
+      
       <div class="feb-20201">12 Feb 2020</div>
-      <div class="amet-minim-mollit1">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </div>
+      
       <div class="amet-minim-mollit2">
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. Exercitation
         veniam consequat sunt nostrud amet.
-      </div>
-      <div class="recent-posts">Recent posts</div>
-      <div class="view-all">View all</div>
+      </div>-->
+
       <div class="featured-works">Featured works</div>
       <div class="footer">
         <div class="footer-child"></div>
