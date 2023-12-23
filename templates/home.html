@@ -3,19 +3,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="home">
+
+  <!-- HTML Component for Navigation Section-->
   {% include 'navigation.html' %}
     
-   
+  <!-- HTML Component for Profile Section-->
   {% include 'profile.html' with profile=profile %}
       
-      </div>
-      {% include 'recent_post.html' with posts=posts %}
+  <!-- HTML Component for  Recent Posts Section-->
+  {% include 'recent_post.html' with posts=posts %}
 
-      {% include 'featured_posts.html' with featured=featured %}
-      
+  <!-- HTML Component for Featured Post Section-->
+  {% include 'featured_posts.html' with featured=featured %}
+  
+  <!-- HTML Component for Footer Section-->
+  {% include 'footer.html' %}
 
-      {% include 'footer.html' %}
 {% endblock %}
 
 
