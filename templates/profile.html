@@ -1,11 +1,16 @@
+<!-- This is the HTML Component for Profile -->
+
 {% for profile in profile %}
-      <div class="container">
-      <b class="hi-i-am-container">
-        <p class="hi-i-am">{{ profile.my_title }}</p>
-      </b>
-      <div class="amet-minim-mollit">{{ profile.bio }}</div>
-      <div class="download-resume"><a href="{{ profile.get_resume_url }}">Download Resume</a></div>
+  <div class="profile-container">
+    <div class="bio-container">
+      <p class="profile-title">{{ profile.my_title }}</p>
+      <p class="profile-bio">{{ profile.bio }}</p>
+      <div class="profile-resume"><a href="{{ profile.get_resume_url }}">Download Resume</a></div>
+    </div>
+    <div class="image-container">
       {% if profile.pics %}
-      <img class="home-inner" src="{{ profile.get_profile_pic_url }}" alt="{{ profile.title }}'s Profile Picture">
-        {% endif %}
-        {% endfor %}
+        <img class="profile-img" src="{{ profile.get_profile_pic_url }}" alt="{{ profile.title }}'s Profile Picture">
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
