@@ -2,21 +2,9 @@
 
 body {
     margin: 0;
-    line-height: normal;
   }
   
   :root {
-    /* fonts */
-    --font-heebo: Heebo;
-  
-    /* font sizes */
-    --font-size-lg: 18px;
-    --font-size-base: 16px;
-    --font-size-xl: 20px;
-    --font-size-11xl: 30px;
-    --font-size-sm: 14px;
-    --font-size-3xl: 22px;
-    --font-size-7xl: 26px;
   
     /* Colors */
     --color-white: #fff;
@@ -28,395 +16,78 @@ body {
     --color-black: #000;
     --primary: #ff6464;
   
-    /* Border radiuses */
-    --br-7xs: 6px;
-    --br-base: 16px;
-    --br-9xs: 4px;
+    /* color: var(--font-size-base); */
+  }
+  p {
+    padding-bottom: 0;
+    padding-top: 0;
   }
 /* end of Global css styles */
 
-.home-child,
-.home-item {
-  position: absolute;
-  top: 223px;
-  left: 755px;
-  border-radius: 50%;
-  background-color: var(--color-aliceblue);
-  width: 243px;
-  height: 243px;
+/* css for profile section */
+.profile-container {
+  width: 100%;
+  padding-top: 90px;
+  padding-left: 140px;
+  border-top: 2px black solid;
+  padding-bottom: 80px;
+  
 }
-.home-item {
-  top: 477px;
-  left: 148px;
-  border-radius: 2px;
-  background-color: var(--primary);
-  width: 208px;
-  height: 47px;
-}
-.hi-i-am {
-  margin: 0;
-}
-.amet-minim-mollit,
-.hi-i-am-container {
-  position: absolute;
-  left: 148px;
+
+.image-container {
+  vertical-align: top;
   display: inline-block;
+  padding-left: 100px;
+  padding-top: 70px;
 }
-.hi-i-am-container {
-  top: 228px;
+
+.profile-img {
+  width: 250px;
+  border-radius: 100%;
+  box-shadow: 10px 10px 15px rgba(103, 147, 185, 0.5);
+}
+
+
+
+.bio-container {
+  display: inline-block;
+  width: 500px;
+  padding-top: 90px;
+}
+
+.profile-title {
+  color: rgb(33, 36, 61);
   font-size: 44px;
+  font-weight: 700;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 60px;
-  width: 506px;
-  height: 105px;
 }
-.amet-minim-mollit {
-  top: 373px;
-  width: 497px;
-  height: 66px;
-}
-.blog,
-.works {
-  top: 27px;
-  color: var(--color-black);
-  text-align: right;
-  height: 43px;
-}
-.works {
-  position: absolute;
-  left: 856px;
-  font-size: var(--font-size-xl);
+
+.profile-resume a {
+  background-color: rgb(255, 100, 100);
+  color:#fff;
+  text-decoration: none;
+  font-size: 26;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 500;
-  display: inline-block;
-  width: 57px;
+  border-radius: 2px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
-.blog {
-  left: 882px;
-  width: 106px;
+
+.profile-resume a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
-.blog,
-.contact,
-.download-resume {
-  position: absolute;
-  font-size: var(--font-size-xl);
-  font-weight: 500;
-  display: inline-block;
+
+.profile-bio {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: rgb(33, 36, 61);
+  line-height: normal;
+  padding-bottom: 20px;
 }
-.contact {
-  top: 27px;
-  left: 1021px;
-  color: var(--color-black);
-  text-align: right;
-  width: 71px;
-  height: 43px;
-}
-.download-resume {
-  top: 486px;
-  left: 168px;
-  color: var(--color-white);
-  width: 167px;
-  height: 21px;
-}
-.home-inner {
-  position: absolute;
-  top: 210px;
-  left: 760px;
-  border-radius: 50%;
-  width: 243px;
-  height: 243px;
-  object-fit: cover;
-}
-.rectangle-div {
-  position: absolute;
-  top: 595px;
-  left: 0;
-  background-color: var(--color-aliceblue);
-  width: 1250px;
-  height: 396px;
-}
-.home-child1,
-.home-child2 {
-  position: absolute;
-  top: 664px;
-  border-radius: var(--br-9xs);
-  background-color: var(--color-white);
-  width: 418px;
-  height: 295px;
-}
-.home-child1 {
-  left: 148px;
-  box-shadow: 0 4px 10px rgba(187, 225, 250, 0.25);
-}
-.home-child2 {
-  left: 586px;
-}
-.creating-pixel-perfect,
-.design-pattern,
-.figma-icon-design,
-.making-a-design {
-  position: absolute;
-  top: 688px;
-  left: 171px;
-  font-size: var(--font-size-7xl);
-  display: inline-block;
-  width: 374px;
-  height: 85px;
-}
-.creating-pixel-perfect,
-.design-pattern,
-.figma-icon-design {
-  left: 609px;
-}
-.design-pattern,
-.figma-icon-design {
-  top: 790px;
-  left: 327px;
-  font-size: var(--font-size-lg);
-  width: 239px;
-  height: 34px;
-}
-.figma-icon-design {
-  left: 765px;
-}
-.home-child3,
-.vector-icon {
-  position: absolute;
-  top: 793px;
-  left: 300.5px;
-  width: 1px;
-  height: 21px;
-}
-.home-child3 {
-  top: 791px;
-  left: 739.5px;
-}
-.feb-2020,
-.feb-20201 {
-  position: absolute;
-  top: 790px;
-  left: 171px;
-  font-size: var(--font-size-lg);
-  display: inline-block;
-  width: 374px;
-  height: 34px;
-}
-.feb-20201 {
-  left: 609px;
-}
-.amet-minim-mollit1,
-.amet-minim-mollit2 {
-  position: absolute;
-  top: 835px;
-  left: 171px;
-  display: inline-block;
-  width: 368px;
-  height: 117px;
-}
-.amet-minim-mollit2 {
-  left: 609px;
-}
-.recent-posts {
-  position: absolute;
-  top: 602px;
-  left: 148px;
-  font-size: var(--font-size-3xl);
-  line-height: 60px;
-}
-.view-all {
-  position: absolute;
-  top: 622px;
-  left: 796px;
-  color: var(--secondry);
-  text-align: right;
-  display: inline-block;
-  width: 208px;
-  height: 20px;
-}
-.featured-works {
-  position: absolute;
-  top: 1006px;
-  left: 148px;
-  font-size: var(--font-size-3xl);
-  line-height: 60px;
-}
-.footer-child {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: var(--color-white);
-}
-.fb-icon,
-.group-icon,
-.insta-icon,
-.linkedin-icon {
-  position: absolute;
-  top: calc(50% - 40px);
-  left: calc(50% - 117px);
-  width: 30px;
-  height: 30px;
-}
-.group-icon,
-.insta-icon,
-.linkedin-icon {
-  left: calc(50% + 85px);
-}
-.group-icon,
-.insta-icon {
-  left: calc(50% + 13px);
-  width: 36.92px;
-}
-.insta-icon {
-  left: calc(50% - 52px);
-  width: 30px;
-}
-.copyright-2020-all {
-  position: absolute;
-  top: calc(50% + 16px);
-  left: 40.28%;
-}
-.footer {
-  position: absolute;
-  top: 1859px;
-  left: 0;
-  width: 1152px;
-  height: 182px;
-  text-align: center;
-  font-size: var(--font-size-sm);
-}
-.days-of-malayalam,
-.designing-dashboards,
-.vibrant-portraits-of {
-  position: absolute;
-  top: 1077px;
-  left: 410px;
-  font-size: var(--font-size-11xl);
-}
-.days-of-malayalam,
-.vibrant-portraits-of {
-  top: 1312px;
-}
-.days-of-malayalam {
-  top: 1560px;
-}
-.dashboard,
-.illustration,
-.typography {
-  position: absolute;
-  top: 1137px;
-  left: 498px;
-  font-size: var(--font-size-xl);
-  color: var(--light);
-  display: inline-block;
-  width: 374px;
-  height: 34px;
-}
-.illustration,
-.typography {
-  top: 1368px;
-}
-.typography {
-  top: 1613px;
-}
-.amet-minim-mollit3,
-.amet-minim-mollit4,
-.amet-minim-mollit5 {
-  position: absolute;
-  top: 1188px;
-  left: 410px;
-  display: inline-block;
-  width: 594px;
-  height: 93px;
-}
-.amet-minim-mollit4,
-.amet-minim-mollit5 {
-  top: 1419px;
-}
-.amet-minim-mollit5 {
-  top: 1679px;
-  left: 413px;
-  width: 507px;
-}
-.home-child4,
-.home-child5,
-.home-child6 {
-  position: absolute;
-  top: 1141px;
-  left: 410px;
-  border-radius: var(--br-base);
-  background-color: var(--color-darkslateblue);
-  width: 62px;
-  height: 25px;
-}
-.home-child5,
-.home-child6 {
-  top: 1372px;
-}
-.home-child6 {
-  top: 1617px;
-}
-.div,
-.div1,
-.div2 {
-  position: absolute;
-  top: 1123px;
-  left: 420px;
-  font-size: var(--font-size-lg);
-  line-height: 60px;
-  font-weight: 900;
-  color: var(--color-white);
-}
-.div1,
-.div2 {
-  top: 1361px;
-}
-.div2 {
-  top: 1599px;
-}
-.home-child7,
-.home-child8,
-.home-child9 {
-  position: absolute;
-  top: 1282.5px;
-  left: 146px;
-  width: 858px;
-  height: 1px;
-}
-.home-child8,
-.home-child9 {
-  top: 1528.5px;
-}
-.home-child9 {
-  top: 1775.5px;
-}
-.home-child10,
-.home-child11,
-.rectangle-icon {
-  position: absolute;
-  top: 1088px;
-  left: 146px;
-  border-radius: var(--br-7xs);
-  width: 246px;
-  height: 180px;
-  object-fit: cover;
-}
-.home-child10,
-.home-child11 {
-  top: 1314px;
-}
-.home-child11 {
-  top: 1560px;
-  height: 184px;
-}
-.home {
-  background-color: var(--color-white);
-  width: 100%;
-  height: 2041px;
-  overflow: hidden;
-  text-align: left;
-  font-size: var(--font-size-base);
-  color: var(--dark-color);
-  font-family: var(--font-heebo);
-}
+/*  end of css for profile section */
+
