@@ -1,30 +1,21 @@
-how can i display FeaturedPosts in my template?
+<!-- recent_post.html -->
 
-view.py=>
-class HomeView(View):
-    template_name = 'home.html'
+<div class="recent-posts-container">
+  <div class="a">
+    <p class="recent-posts">Recent posts</p>
+    <p class="view-all">View all</p>
+  </div>
+  {% for item in posts %}
+  <div class="posts-recents">
+    <div class="posts-title"><b>{{ item.title }}</b></div>
+    <div>
+      <p class="feb-2020">{{ item.date|date:"M" }} {{ item.date|date:"d" }}, {{ item.date|date:"Y" }}</p>
+      <p class="design-pattern">Design, Pattern</p>
+    </div>
+    <div class="amet-minim-mollit1">{{ item.body|truncatechars:200 }}</div>
+  </div>
+  {% endfor %}
+</div>
 
-    def get_context_data(self, **kwargs):
-        context = {
-            'profile': UserProfile.objects.all(),
-            'posts': RecentPosts.objects.all()[:2],
-            'featured': FeaturedPosts.objects.all(),
-        }
-        return context
-
-    def get(self, request, *args, **kwargs):
-        return render(request, self.template_name, self.get_context_data())
-
-model.py=>
-class FeaturedPosts(models.Model):
-    title = models.CharField(max_length=50)
-    title_type = models.CharField(max_length=20)
-    body = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
-    img = models.ImageField(upload_to='featured_imgs', blank=True, null=True)
-
-    def __str__(self):
-        return self.title
-    
-    def get_absolute_url(self):
-        return reverse("featured_post_detail", kwargs={"pk": self.pk})
+i want posts-recents class to be rendered side by side on the web and below a class and all inside container recent-posts-container class
+how can i do this with css?

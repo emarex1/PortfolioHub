@@ -91,3 +91,48 @@ body {
 }
 /*  end of css for profile section */
 
+.recent-posts-container {
+  background-color:rgb(237, 247, 250);
+  color: rgb(33, 36, 61);
+  padding: 10px;
+  padding-left: 140px;
+  padding-right: 140px;
+  padding-bottom: 20px;
+
+}
+
+.posts-recents {
+  background-color: #fff;
+  margin: 10px;
+  display:flex;
+  flex-direction: column;
+  width: 100px;
+  
+}
+
+.recent-posts-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.posts-recents-con {
+  display: flex;
+  flex-direction: row;
+}
+
+.recent-posts-container {
+  display: flex;
+  flex-wrap: nowrap; /* This prevents items from wrapping to the next line */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+}
+
+.posts-recents-con {
+  flex: 0 0 auto; /* This makes the container take its content's size without growing or shrinking */
+  width: 100%; /* Adjust width as needed */
+  /* Additional styling */
+}
+
+.posts-recents {
+  width: 100%; /* Adjust width as needed */
+  /* Additional styling */
+}
