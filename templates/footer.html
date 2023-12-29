@@ -1,19 +1,19 @@
 <!--the link to the svg file is static/images/fb.svg-->
 
 {% load static %}
-<div class="footer">
-    <div class="footer-child"></div>
-    <img class="fb-icon" alt="" src="{% static 'images/fb.svg' %}" />
-
-    <a href="https://www.linkedin.com/in/emmanuel-awoh/" target="_blank">
-      <img class="linkedin-icon" alt="" src="{% static 'images/linkedin.svg' %}"/>
-    </a>
-    <a href="https://twitter.com/_Emarex" target="_blank">
-    <img class="group-icon" alt="" src="{% static 'images/group.svg' %}" />
-    </a>
-    <img class="insta-icon" alt="" src="{% static 'images/insta.svg' %}" />
-
-    <div class="copyright-2020-all">
-      Copyright ©2020 All rights reserved
+<section>
+  <div class="footer-container">
+    <div class="media-links">
+      <img class="facebook-icon" alt="" src="{% static 'images/fb.svg' %}" />
+  
+      <a href="https://www.linkedin.com/in/emmanuel-awoh/" target="_blank">
+        <img class="linkedin-icon" alt="" src="{% static 'images/linkedin.svg' %}"/>
+      </a>
+      <a href="https://twitter.com/_Emarex" target="_blank">
+        <img class="twitter-icon" alt="" src="{% static 'images/group.svg' %}" />
+      </a>
+      <img class="instagram-icon" alt="" src="{% static 'images/insta.svg' %}" />
     </div>
+    <div class="copyright">Copyright ©{% now "Y" %} All rights reserved</div>
   </div>
+</section>
