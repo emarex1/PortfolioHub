@@ -1,46 +1,25 @@
 <!-- featured_posts.html-->
-<div class="featured-works-container">
-<div class="featured-works">Featured works</div>
-{% for item in featured %}
-      
-     
-      
-      <b class="designing-dashboards">{{item.title}}</b>
-      <b class="vibrant-portraits-of">Vibrant Portraits of 2020</b>
-      <b class="days-of-malayalam">36 Days of Malayalam type</b>
-      <div class="dashboard">{{item.title_type}}</div>
-      <div class="illustration">Illustration</div>
-      <div class="typography">Typography</div>
-      <div class="amet-minim-mollit3">{{item.body|truncatechars:200}}</div>
-      <div class="amet-minim-mollit4">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </div>
-      <div class="amet-minim-mollit5">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </div>
-      <div class="home-child4"></div>
-      <div class="home-child5"></div>
-      <div class="home-child6"></div>
-      <div class="div">{{item.date|date:"Y"}}</div>
-      <div class="div1">2018</div>
-      <div class="div2">2018</div>
-      <img class="home-child7" alt="" src="./public/vector-8.svg" />
 
-      <img class="home-child8" alt="" src="./public/vector-8.svg" />
+{% load static %}
 
-      <img class="home-child9" alt="" src="./public/vector-8.svg" />
-      
+{% block content %}
+<section>
+      <div class="featured">
+      <div class="featured-works-text">Featured works</div>
+      {% for item in featured %}
+      <div class="featured-works-container">
       {% if item.img %}
-
-      <img class="rectangle-icon" alt="yo men" src="{{ item.get_featured_imgs_url }}" />
+      <div class="img"  ><img class="rectangle-icon" style="wid: 100px;" alt="yo men" src="{{ item.get_featured_imgs_url }}" /></div>
       {% endif %}
-
-      <img class="home-child10" alt="" src="./public/rectangle-32@2x.png" />
-
-      <img class="home-child11" alt="" src="./public/rectangle-34@2x.png" />
+      <div class="body-container">
+            <p class="designing-dashboards"><b>{{item.title}}</b></p>
+            <div class="date">{{item.date|date:"Y"}}</div>   
+            <div class="dashboard">{{item.title_type}}</div>     
+            <div class="featured_posts-body">{{item.body|truncatechars:200}}</div>
+      </div>
+      </div>
       {% endfor %}
-</div>
+      </div>
+</section>
+
+{% endblock %}
