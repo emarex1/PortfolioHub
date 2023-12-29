@@ -1,20 +1,25 @@
 <!-- recent_post.html -->
 
-<div class="recent-posts-nav">
-  <p class="recent-posts">Recent posts</p>
-  <p class="view-all">View all</p>
-</div>
-<div class="recent-posts-container">
-  {% for item in posts %}
-  <div class="posts-recents-con">
-    <div class="posts-recents">
-      <div class="posts-title"><b>{{ item.title }}</b></div>
-      <div style="display: flex; justify-content: space-around;">
-        <p class="feb-2020">{{ item.date|date:"M" }} {{ item.date|date:"d" }}, {{ item.date|date:"Y" }}</p>
-        <p class="design-pattern">Design, Pattern</p>
-    </div>
-    <div class="post-body">{{ item.body|truncatechars:200 }}</div>
-    </div>
+{% load static %}
+{% block content %}
+<section>
+  <div class="recent-posts-nav">
+    <p class="recent-posts">Recent posts</p>
+    <p class="view-all">View all</p>
   </div>
-  {% endfor %}
-</div>
+  <div class="recent-posts-container">
+    {% for item in posts %}
+    <div class="posts-recents-con">
+      <div class="posts-recents">
+        <div class="posts-title"><b>{{ item.title }}</b></div>
+        <div style="display: flex; justify-content: space-around;">
+          <p class="feb-2020">{{ item.date|date:"M" }} {{ item.date|date:"d" }}, {{ item.date|date:"Y" }}</p>
+          <p class="design-pattern">Design, Pattern</p>
+      </div>
+      <div class="post-body">{{ item.body|truncatechars:200 }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
