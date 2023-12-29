@@ -1,6 +1,8 @@
 <!-- This is the HTML Component for Profile -->
 
-{% for profile in profile %}
+{% load static %}
+<section>
+  {% for profile in profile %}
   <div class="profile-container">
     <div class="bio-container">
       <p class="profile-title">{{ profile.my_title }}</p>
@@ -13,4 +15,5 @@
       {% endif %}
     </div>
   </div>
+</section>
 {% endfor %}
