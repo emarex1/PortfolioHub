@@ -133,9 +133,10 @@ body {
   flex-direction: column;
   width: auto;
   height: auto;
-  box-shadow: rgba(187, 225, 250, 0.25) 0px 4px 10px 0px;
+  box-shadow: rgba(187, 225, 250, 0.5) 5px 4px 30px 0px ;
   border-radius: 4px;
   padding: 20px;
+  
   
 }
 
@@ -157,16 +158,87 @@ body {
   color: rgb(33, 36, 61);
   font-size: 26px;
   font-weight: 700;
+  padding-bottom: 20px;
 }
 
 .feb-2020, .design-pattern {
   color: rgb(33, 36, 61);
   font-size: 16px;
   font-family: sans-serif;
+  font-weight: 500;
 }
 
 .post-body {
   color: rgb(33, 36, 61);
   font-size: 16px;
   font-family: sans-serif;
+}
+
+
+
+
+
+.featured {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  eight: auto;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+.featured-works-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+  background-color: #ff6464;
+  gap: 10px;
+}
+
+.body-container {
+  display: block;
+  flex: 1;
+}
+
+.img {
+  width: 200px;
+  height: auto;
+}
+
+.rectangle-icon {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.designing-dashboards {
+  font-weight: bold;
+  margin-top: 10px; /* Adjust as needed */
+}
+
+.date,
+.dashboard,
+.featured_posts-body {
+  margin-top: 5px; /* Adjust as needed */
+}
+
+
+
+
+
+
+
+.media-links, .copyright {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ 
+}
+
+.media-links {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.copyright {
+  padding-bottom: 50px;
 }

@@ -1,21 +1,24 @@
-<!-- recent_post.html -->
-
-<div class="recent-posts-container">
-  <div class="a">
-    <p class="recent-posts">Recent posts</p>
-    <p class="view-all">View all</p>
+<div class="works">
+  {% for item in featured %}
+        <div class="featured-works-container">
+        {% if item.img %}
+        <div class="img"  ><img class="rectangle-icon" style="idth: 100px;" alt="yo men" src="{{ item.get_featured_imgs_url }}" /></div>
+        {% endif %}
+        <div class="body-container">
+              <p class="designing-dashboards"><b>{{item.title}}</b></p>
+              <div class="date">{{item.date|date:"Y"}}</div>   
+              <div class="dashboard">{{item.title_type}}</div>     
+              <div class="featured_posts-body">{{item.body|truncatechars:200}}</div>
+        </div>
+        {% endfor %}
   </div>
-  {% for item in posts %}
-  <div class="posts-recents">
-    <div class="posts-title"><b>{{ item.title }}</b></div>
-    <div>
-      <p class="feb-2020">{{ item.date|date:"M" }} {{ item.date|date:"d" }}, {{ item.date|date:"Y" }}</p>
-      <p class="design-pattern">Design, Pattern</p>
-    </div>
-    <div class="amet-minim-mollit1">{{ item.body|truncatechars:200 }}</div>
   </div>
-  {% endfor %}
-</div>
+  {% endblock post %}
 
-i want posts-recents class to be rendered side by side on the web and below a class and all inside container recent-posts-container class
-how can i do this with css?
+contents inside the for loop is being rendered from django model.
+where should i apply css to affect contents being render from model: featured-works class or featured-works-container class and why?
+i want contents inside the work/featured-works-container class => img and designing-dashboards to be flex row
+and contents inside designing-dashboards class to be flex column
+Featured works will be displayed once and on top while contents being rendered from the model below after each loop
+
+pls generate the css for above
