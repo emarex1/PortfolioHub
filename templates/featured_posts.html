@@ -4,22 +4,23 @@
 
 {% block content %}
 <section>
-      <div class="featured">
-      <div class="featured-works-text">Featured works</div>
-      {% for item in featured %}
       <div class="featured-works-container">
-      {% if item.img %}
-      <div class="img"  ><img class="rectangle-icon" style="wid: 100px;" alt="yo men" src="{{ item.get_featured_imgs_url }}" /></div>
-      {% endif %}
-      <div class="body-container">
-            <p class="designing-dashboards"><b>{{item.title}}</b></p>
-            <div class="date">{{item.date|date:"Y"}}</div>   
-            <div class="dashboard">{{item.title_type}}</div>     
-            <div class="featured_posts-body">{{item.body|truncatechars:200}}</div>
-      </div>
-      </div>
-      {% endfor %}
+            <div class="featured-works-text">Featured works</div>
+            {% for item in featured %}
+            <div class="featured">
+                  {% if item.img %}
+                  <div class="img"  ><img class="rectangle-icon" style="wid: 100px;" alt="yo men" src="{{ item.get_featured_imgs_url }}" /></div>
+                  {% endif %}
+                  <div class="body-container">
+                        <p class="featured-posts-title">{{item.title}}</p>
+                        <div class="date-dashboard">
+                              <div class="date">{{item.date|date:"Y"}}</div>   
+                              <div class="dashboard">{{item.title_type}}</div>
+                        </div>     
+                        <div class="featured_posts-body">{{item.body|truncatechars:200}}</div>
+                  </div>
+            </div>
+            {% endfor %}
       </div>
 </section>
-
 {% endblock %}
