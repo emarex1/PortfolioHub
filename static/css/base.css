@@ -129,7 +129,10 @@ body {
 @media only screen and (max-width: 700px) {
   .recent-posts-container {
     flex-wrap: wrap;
+    padding-left: 40px;
+    padding-right: 40px;
   }
+
 }
 
 .recents-posts-inloop {
