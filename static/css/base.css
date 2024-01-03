@@ -39,22 +39,23 @@ body {
 
 .bio-container {
   display: flex;
-  flex: 1;
+  flex: 2;
   flex-direction: column;
   padding-top: 90px;
-  flex-basis: 300px;
+  flex-basis: 200px;
   padding-right: 20px;
 }
 
 .image-container {
   vertical-align: top;
-  max-width: 400px;
+  max-width: 600px;
   padding-top: 90px;
   padding-right: 40px;
+  flex: 1;
 }
 
 .profile-img {
-  max-width: 250px;
+  max-width: 200px;
   border-radius: 100%;
   box-shadow: 10px 10px 15px rgba(103, 147, 185, 0.5);
 }
@@ -95,11 +96,12 @@ body {
   padding-bottom: 20px;
 }
 
-@media only screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .profile-container {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
     padding-top: 0%;
+    flex-wrap: wrap;
   }
 
   
