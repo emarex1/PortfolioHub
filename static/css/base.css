@@ -27,34 +27,38 @@ body {
 
 /* css for profile section */
 .profile-container {
-  width: 100%;
-  padding-top: 90px;
-  padding-left: 140px;
+  display: flex;
+  flex-wrap: wrap-reverse;
   border-top: 2px black solid;
   padding-bottom: 80px;
+  padding-left: 140px;
+  padding-right: 140px;
+  justify-content: center;
   
+}
+
+.bio-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-top: 90px;
+  flex-basis: 300px;
+  padding-right: 20px;
 }
 
 .image-container {
   vertical-align: top;
-  display: inline-block;
-  padding-left: 100px;
-  padding-top: 70px;
+  max-width: 400px;
+  padding-top: 90px;
+  padding-right: 40px;
 }
 
 .profile-img {
-  width: 250px;
+  max-width: 250px;
   border-radius: 100%;
   box-shadow: 10px 10px 15px rgba(103, 147, 185, 0.5);
 }
 
-
-
-.bio-container {
-  display: inline-block;
-  width: 500px;
-  padding-top: 90px;
-}
 
 .profile-title {
   color: rgb(33, 36, 61);
@@ -89,6 +93,16 @@ body {
   color: rgb(33, 36, 61);
   line-height: normal;
   padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .profile-container {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0%;
+  }
+
+  
 }
 /*  end of css for profile section */
 
