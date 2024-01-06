@@ -10,6 +10,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;400;500;700;800&family=Inter:wght@400;500&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width,
   initial-scale=1, shrink-to-fit=no">
 
@@ -18,41 +21,6 @@
   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-  <nav>
-  <header class="p-3 mb-3 border-bottom">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center
-        justify-content-lg-start">
-        <a class="navbar-brand" href="{% url 'home' %}">Portofolio Hub</a>
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center
-          mb-md-0">
-          {% if user.is_authenticated %}
-          <li><a href="{% url 'article_new' %}"
-            class="nav-link px-2 link-dark">+ New</a></li>
-        </ul>
-        <div class="dropdown text-end">
-          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle"
-            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            {{ user.username }}
-          </a>
-          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-            <li><a class="dropdown-item" href="{% url 'password_change'%}">
-              Change password</a></li>
-            <li><a class="dropdown-item" href="{% url 'logout' %}">Log Out</a></li>
-          </ul>
-        </div>
-        {% else %}
-        </ul>
-        <div class="text-end">
-          <a href="{% url 'login' %}" class="btn btn-outline-primary me-2">
-            Log In</a>
-          <a href="{% url 'signup' %}" class="btn btn-primary">Sign Up</a>
-        </div>
-        {% endif %}        
-      </div>
-    </div>
-  </header>
-</nav>
 
   <main>
     {% block content %}

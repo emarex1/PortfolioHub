@@ -3,10 +3,19 @@
 {% block content %}
 
 <section>
-    <div class="home-child"></div>
-    <div class="home-item"></div>
-    <div class="works">Works</div>
-    <div class="blog">Blog</div>
-    <div class="contact">Contact</div>
+    <nav>
+        <header class="">
+          <div class="nav-container">
+            <div class="navbar-brand-container">
+              <a class="navbar-brand" href="{% url 'home' %}">Portofolio Hub</a>   
+            </div>
+            <div class="works-blogs-contact">
+                <div class=""><a class="works" href="{% url 'home' %}">Works</a></div>
+                <div class=""><a class="blog" href="{% url 'home' %}">blog</a></div>
+                <div class=""><a class="contact" href="{% url 'home' %}">contact</a></div>
+            </div>
+          </div>
+        </header>
+      </nav>
 </section>
 {% endblock %}
